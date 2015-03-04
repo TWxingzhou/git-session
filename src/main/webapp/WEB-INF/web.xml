@@ -19,4 +19,8 @@
         <servlet-name>mvc-dispatcher</servlet-name>
         <url-pattern>/luyou</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
 </web-app>
