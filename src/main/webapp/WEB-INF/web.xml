@@ -28,7 +28,7 @@
     </context-param>
 
     <!-- 字符集 过滤器 -->
-    <context-param>
+    <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
@@ -37,10 +37,23 @@
         </init-param>
         <init-param>
             <param-name>encoding</param-name>
-            <param-value></param-value>
+            <param-value>true</param-value>
         </init-param>
-    </context-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
+    <!-- spring 监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+
+    <!-- spring 分发器 -->
 
   <servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
