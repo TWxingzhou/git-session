@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan
+            base-package="com.springapp.mvc.service" />
+</beans>
+<!--
+    这里通过<context:component-scan />标签指定了业务层的基础包路径——“org.zlex.spring.service”。也就是说，业务层相关实现均在这一层。这是有必要的分层之一。
+-->
