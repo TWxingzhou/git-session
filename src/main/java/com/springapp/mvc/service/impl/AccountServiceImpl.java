@@ -10,6 +10,7 @@ import com.springapp.mvc.service.AccountService;
 /**
  * Created by xingzhou on 3/10/15.
  */
+
 @Service
 @Transactional
 public class AccountServiceImpl implements AccountService {
